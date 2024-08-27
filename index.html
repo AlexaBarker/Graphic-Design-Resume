@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Resume | Alexa Barker</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="files/checkmark.jpg">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/*Scroll Bar*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(65, 76, 199); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #121b81; 
+}
+
+/* Header/logo Title */
+.header {
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  opacity: 1;
+  user-select: none;
+}
+
+/* Header */
+
+.headerChild {
+  width: 100%;
+  height: 100%;
+  background-image: url("Images/header_image5.jpg");
+  background-size: cover;
+}
+
+.header h1 {
+  width: fit-content;
+  padding: 20px;
+
+  text-align: center;
+  color: #f7f1f3;/*white*/
+  text-shadow: .1em .1em .2em rgb(0, 12, 5);
+  /*text-shadow: 0em 0em 2em rgb(0, 12, 5);*/
+  font-weight: bolder;
+  opacity: 1;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.header div {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: background-color .5s ease-out;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #7facf0;
+  color: black;
+}
+
+.navbarActive {
+  cursor: default;
+  background-color: #7facf0;
+  color: black;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: underline;
+  transition: background-color .5s ease-out;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-right: solid 3px #949494; /*dark gray*/
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+  align-items: center;
+  box-shadow: 2px 2px 8px;
+  line-break: loose;
+}
+
+.achievementImage {
+  float: left;
+  margin: -15px 1em 0em 0em;
+  background-color: rgba(238, 238, 238, 0.7);
+  border-radius: 9em;
+  width: auto;
+  height: 3em;
+  padding: 2px 12px 2px 12px;
+  align-items: center;
+}
+
+.expCard {
+  user-select: none;
+  vertical-align: top; 
+  border: solid 3px #ffffff; /*white*/
+  background-color: #333; /*black*/
+  border-radius: 20px;
+  width: 30%;
+  padding:5px;
+  display:inline-block;
+  margin-left: 2px;
+  box-shadow: 2px 2px 8px;
+  color: #ffffff; /*white*/
+  transition: background-color 1s ease-out;
+
+}
+
+.expCard:hover {
+  background-color: #5f5f5f;
+  box-shadow: inset 10px 10px 10px black;
+}
+
+.expCard:hover .expCardImage {
+  box-shadow: 0px 0px 10px 10px rgb(126, 105, 240);
+}
+
+.expCardImage {
+  width: 80%;
+  max-width: 250px;
+  height: auto;
+  border:solid 2px #ffffff;
+  border-radius:600px;
+  margin:10px;
+  object-fit: cover;
+  background-color: #404040; /*dark gray*/
+}
+
+  .expCardText {
+  font-weight: bolder;
+  text-align: left;
+  margin-left: 5px;
+}
+
+  .expCardList {
+    text-align: left;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #333;/*very dark gray*/
+  color: #ffffff; /*white*/
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .expCard {
+    float: none;
+    width: 80%;
+    margin-bottom: 15px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">   
+  <h1>
+    <span>Alexa Barker</span> <br>
+    <span>Graphic Design/Policy</span>
+  </h1>
+  <div class="headerChild">
+  </div>
+</div>
+
+<div class="navbar">
+  <a href="#" class="navbarActive">Home</a>
+  <a href="graphic_design.html">Graphic Design</a>
+  <a href="resume.html">Resume</a>
+  <a href="Master/About/About.html" class="right">About</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>Bio</h2>
+    <div class="fakeimg"><img src="Images/ProfileImage.jpg" style="width:100%; box-shadow: 2px 2px 5px;" alt="Wall of data"></div>
+      <p>My name is Alexa Barker and I have practice in international policy and graphic design. I have gained a range of experience from both my time at Centre College and various internships including the Kentucky Office of Homeland Security and the U.S State Department. </p>
+      
+      <p>I am currently completing my Bachelor's of Arts degree in International Relations with a focus on Middle Eastern affairs upon May, 2025.  I gained both intrest and skills in graphic design through various research and internship projects completed while working toward my goal career in counterterrorism and national security. </p>
+
+      <p> Outside of graphic design I have experience in defense policy research, professional writing, policy memos, and regional conflict deterrence strategy.  I feel at home in a team environment, and look forward to new collaborations. </p> 
+   
+    <h3>Achievements</h3>
+    <p>Here are some of my greatest accomplishments</p>
+
+    <div class="fakeimg" style="height:fit-content;">
+      <img src="Images/citi_logo.png" class="achievementImage" alt="cycle image">
+      <span style="margin-left:10px; font-weight:bold;">Collaborative Institutional Training Initiative Responsible Conduct of Research: Social, Behavioral, and Education Sciences Basic Course Certified <span style="font-weight: bolder;">Completed March 26, 2023</span></span>
+    </div>
+
+    <br>
+
+    <div class="fakeimg" style="height:fit-content;">
+      <img src="Images/ADP_logo.png" class="achievementImage" alt="data image">
+      <span style="margin-left:10px; font-weight:bold;">Vice President of Member Development – Alpha Delta Pi, Eta Omega</span>
+    </div>
+
+    <br>
+
+    <div class="fakeimg" style="height:fit-content;">
+       <img src="Images/future.jpg" class="achievementImage" alt="data image">
+       <span style="margin-left:10px; font-weight:bold;">My next big achievement could be with YOUR organization!</span>
+    </div>
+  </div>
+
+  <div class="main">
+    <h2>Experience</h2>
+
+    <div class="fakeimg" align="center">
+      <div class="expCard">
+        <img class="expCardImage" src="Images/KOHS_logo.jfif" alt="The place I worked">
+        <p class="expCardText">10 May 2024 - Present<br>
+          Internship : The Kentucky Office of Homeland Security (KOHS)<br><br>
+          Title: Intelligence Analyst Intern - Emphasis on Graphic Design<br>
+          <br>
+          Responsibilities:<hr>
+            Provide/improve formatting and style of traing and intelligence documents as well as PowerPoint presentations.<hr>
+            Conduct opensource research as needed.
+            <br>
+          </p>
+        </div>
+
+      <div class="expCard">
+        <img class="expCardImage" src="Images/State_Department_Logo.png" alt="The place I worked">
+        <p class="expCardText">Jan 2024 - Mar 2024<br>
+          Department of State - Bureau of International Security & Non-Proliferation<br><br>
+          Title: Office of Policy Coordination Intern<br>
+          <br>
+          Responsibilities:<hr>
+            Conduct policy brief<hr>
+            Research prior securty policy and feedback on policies <hr>
+            Execute all tasks with a high level of proficiency in professional writing
+          </p>
+      </div>
+
+      <div class="expCard">
+        <img class="expCardImage" src="Images/Centere_College_logo.png" alt="The place I worked">
+        <p class="expCardText">Oct 2022 - Present<br>
+          Centere College<br>
+          Stream Director - Sports Information Employee<br>
+          <br>
+          Responsibilities: <hr>
+          Tracking statistics and coordinating broadcasting with production.<hr>
+          Coordinating music, entertainment, and graphics for all sports complexes.<hr>
+          Maintaining proficiency in operating Production Truck collegiate athletic streaming software.<hr>
+          Operating high-end audio and visual equipment for livestream.</p>
+      </div>
+    </div>
+
+    <br>
+
+    <h2>Skills</h2>
+
+    <div class="fakeimg" align="center">
+      <div class="expCard">
+        <img class="expCardImage" src="Images/Canva-Logo.png" alt="The place I worked">
+        <p class="expCardText">Graphic Design:<br>
+          <ul class="expCardList">
+            <li>Canva Proficiency</li>
+            <li>Professional design specialty</li>
+            <li>Proficiency in typography</li>
+            <li>Marketing products</li>
+          </ul>
+          </p>
+        </div>
+
+      <div class="expCard">
+        <img class="expCardImage" src="Images/writing.jpg" alt="The place I worked">
+        <p class="expCardText">Writing:<br>
+          <ul class="expCardList">
+            <li>Professional writing (federal cables, briefs, etc.)</li>
+            <li>Analytical reports</li>
+            <li>Academic writing (research)</li>
+          </ul>
+        </p>
+      </div>
+
+      <div class="expCard">
+        <img class="expCardImage" src="Images/research.jpg" alt="The place I worked">
+        <p class="expCardText">Research:<br>
+          <ul class="expCardList">
+            <li>Open-sourced research</li>
+            <li>Qualitative research</li>
+            <li>Quantitative comparative research</li>
+            <li>Critical analysis</li>
+          </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Alexa Barker</h2>
+  <p><a href="mailto: Mobile: (502) 320-4062
+    Email: alexa.barker@centre.edu" title="contact me here"><span style="color:#ffffff;">alexa.barker@centre.edu</span></a></p>
+  <p><span style="font-size:8pt;">Mobile: (502) 320-4062</span></p>
+  <p><span style="font-size:8pt;">Last updated 25 Aug 2024</span></p>
+
+</div>
+
+</body>
+</html>

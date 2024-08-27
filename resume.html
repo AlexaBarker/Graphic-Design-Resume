@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My Resume</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="files/checkmark.jpg">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/*Scroll Bar*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(65, 199, 121); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #12813d; 
+}
+
+/* Header/logo Title */
+.header {
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  opacity: 1;
+  
+}
+
+.headerChild {
+  width: 100%;
+  height: 100%;
+  background-image: url("Images/header_image.jpg");
+  background-size: cover;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  width: fit-content;
+  padding: 20px;
+
+  text-align: center;
+  color: #f7f1f3;/*white*/
+  text-shadow: .1em .1em .2em rgb(0, 12, 5);
+  /*text-shadow: 0em 0em 2em rgb(0, 12, 5);*/
+  font-weight: bolder;
+  opacity: 1;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #7facf0;
+  color: black;
+  text-decoration: underline;
+}
+
+.navbarActive {
+  cursor: default;
+  background-color: #7facf0;
+  color: black;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: underline;
+  transition: background-color .5s ease-out;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-right: solid 3px #949494; /*dark gray*/
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+.achievementImage {
+  float: left;
+  margin: -15px 1em 0em 0em;
+  background-color: rgba(238, 238, 238, 0.7);
+  border-radius: 9em;
+  width: auto;
+  height: 3em;
+  padding: 2px 12px 2px 12px;
+  align-items: center;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+  align-items: center;
+  box-shadow: 2px 2px 8px;
+}
+
+.downloadButton {
+  width: 30%;
+  height: auto;
+  margin: 10px;
+  border-radius: 1em;
+  box-shadow: 4px 2px 5px black;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #333;/*very dark gray*/
+  color: #ffffff; /*white*/
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .side {
+    display: none;
+  }
+}
+</style>
+</head>
+
+<body>
+  <div class="header">   
+    <h1>
+      <span>Alexa Barker</span> <br>
+      <span>Graphic Design/Policy</span>
+    </h1>
+    <div class="headerChild">
+    </div>
+  </div>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="graphic_design.html">Graphic Design</a>
+  <a href="#" class="navbarActive">Resume</a>
+  <a href="Master/About/About.html" class="right">About</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>Bio</h2>
+    <div class="fakeimg"><img src="Images/AI_Selfie.jpg" style="width:100%; box-shadow: 2px 2px 5px;" alt="Wall of data">Image from Leonardo.ai</div>
+    <p>My name is Alexa Barker and I have practice in international policy and graphic design. I have gained a range of experience from both my time at Centre College and various internships including the Kentucky Office of Homeland Security and the U.S State Department. </p>
+      
+    <p>I am currently completing my Bachelor's of Arts degree in International Relations with a focus on Middle Eastern affairs upon May, 2025.  I gained both intrest and skills in graphic design through various research and internship projects completed while working toward my goal career in counterterrorism and national security. </p>
+
+    <p> Outside of graphic design I have experience in defense policy research, professional writing, policy memos, and regional conflict deterrence strategy.  I feel at home in a team environment, and look forward to new collaborations. </p> 
+   
+    <h3>Achievements</h3>
+    <p>Here are some of my greatest accomplishments</p>
+    <div class="fakeimg" style="height:fit-content;">
+      <img src="Images/citi_logo.png" class="achievementImage" alt="cycle image">
+      <span style="margin-left:10px; font-weight:bold;">Collaborative Institutional Training Initiative Responsible Conduct of Research: Social, Behavioral, and Education Sciences Basic Course Certified <span style="font-weight: bolder;">Completed March 26, 2023</span></span>
+    </div>
+
+    <br>
+
+    <div class="fakeimg" style="height:fit-content;">
+      <img src="Images/ADP_logo.png" class="achievementImage" alt="data image">
+      <span style="margin-left:10px; font-weight:bold;">Vice President of Member Development – Alpha Delta Pi, Eta Omega</span>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <!--return to previdious page-->
+    <h2><a href ="index.html" title="return to main page">< Back</a></h2>
+
+    <p>Thank you for your time.</p>
+
+    <p>My resume loads very easily in a PC or Mac browser, but may be problematic in devices with smaller screens.  If a preview of my resume does not appear, you may download it by clicking the link below.
+
+      <br>
+        <!--the href should be the PDF that you want to be downloaded.-->
+      <a href="Alexa Barker - Resume.pdf" download="Alexa_Barker_Resume">
+
+        <!--the img src sould be a jpg or png of your  resume--> 
+      <img src="Images/download_icon.gif" alt="download my resume" class="downloadButton"></a>
+
+        <!--This should be the file path to your resume.pdf file. -->
+      <embed src="Alexa Barker - Resume.pdf" width="100%" height="1000px"/>
+    </p>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Alexa Barker</h2>
+  <p><a href="mailto: Mobile: (502) 320-4062
+    Email: alexa.barker@centre.edu" title="contact me here"><span style="color:#ffffff;">alexa.barker@centre.edu</span></a></p>
+  <p><span style="font-size:8pt;">Mobile: (502) 320-4062</span></p>
+  <p><span style="font-size:8pt;">Last updated 25 Aug 2024</span></p>
+</div>
+
+</body>
+
+</html>
